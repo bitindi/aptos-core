@@ -275,7 +275,7 @@
       "panels": [
         {
           "datasource": { "type": "prometheus", "uid": "PCD0403638111AF12" },
-          "gridPos": { "h": 3, "w": 24, "x": 0, "y": 2 },
+          "gridPos": { "h": 3, "w": 24, "x": 0, "y": 21 },
           "id": 3252,
           "options": {
             "content": "We expect nodes to have more than 200GB free space all the time.\r\n\r\nIdentify outliers on the left and filter by peer name to see it's specific values on the other panels. Otherwise you are seeing average values.",
@@ -321,7 +321,7 @@
             },
             "overrides": []
           },
-          "gridPos": { "h": 9, "w": 12, "x": 0, "y": 5 },
+          "gridPos": { "h": 9, "w": 12, "x": 0, "y": 24 },
           "id": 3250,
           "options": {
             "legend": { "calcs": [], "displayMode": "list", "placement": "bottom", "showLegend": false },
@@ -398,7 +398,7 @@
               }
             ]
           },
-          "gridPos": { "h": 9, "w": 12, "x": 12, "y": 5 },
+          "gridPos": { "h": 9, "w": 12, "x": 12, "y": 24 },
           "id": 3295,
           "options": {
             "legend": { "calcs": [], "displayMode": "table", "placement": "right", "showLegend": false },
@@ -471,7 +471,7 @@
               }
             ]
           },
-          "gridPos": { "h": 9, "w": 12, "x": 0, "y": 14 },
+          "gridPos": { "h": 9, "w": 12, "x": 0, "y": 33 },
           "id": 3297,
           "options": {
             "legend": { "calcs": [], "displayMode": "list", "placement": "bottom", "showLegend": false },
@@ -542,7 +542,7 @@
               }
             ]
           },
-          "gridPos": { "h": 9, "w": 12, "x": 12, "y": 14 },
+          "gridPos": { "h": 9, "w": 12, "x": 12, "y": 33 },
           "id": 3298,
           "options": {
             "legend": { "calcs": [], "displayMode": "list", "placement": "bottom", "showLegend": false },
@@ -614,7 +614,7 @@
               }
             ]
           },
-          "gridPos": { "h": 9, "w": 12, "x": 0, "y": 23 },
+          "gridPos": { "h": 9, "w": 12, "x": 0, "y": 42 },
           "id": 40,
           "links": [],
           "options": {
@@ -703,7 +703,7 @@
               }
             ]
           },
-          "gridPos": { "h": 9, "w": 12, "x": 12, "y": 23 },
+          "gridPos": { "h": 9, "w": 12, "x": 12, "y": 42 },
           "id": 3300,
           "links": [],
           "options": {
@@ -807,7 +807,7 @@
               }
             ]
           },
-          "gridPos": { "h": 9, "w": 12, "x": 0, "y": 32 },
+          "gridPos": { "h": 9, "w": 12, "x": 0, "y": 51 },
           "id": 3296,
           "links": [],
           "options": {
@@ -905,14 +905,14 @@
                   { "id": "custom.lineWidth", "value": 2 },
                   { "id": "custom.lineStyle", "value": { "dash": [10, 10], "fill": "dash" } },
                   { "id": "color", "value": { "fixedColor": "blue", "mode": "fixed" } },
-                  { "id": "custom.axisLabel", "value": "per byte on disk (unpruned amortized)" },
+                  { "id": "custom.axisLabel", "value": "per item on disk (unpruned amortized)" },
                   { "id": "decimals", "value": 1 },
                   { "id": "custom.stacking", "value": { "group": "A", "mode": "none" } }
                 ]
               }
             ]
           },
-          "gridPos": { "h": 9, "w": 12, "x": 12, "y": 32 },
+          "gridPos": { "h": 9, "w": 12, "x": 12, "y": 51 },
           "id": 3299,
           "links": [],
           "options": {
@@ -1015,7 +1015,7 @@
             },
             "overrides": []
           },
-          "gridPos": { "h": 9, "w": 12, "x": 0, "y": 41 },
+          "gridPos": { "h": 9, "w": 12, "x": 0, "y": 60 },
           "id": 1193,
           "options": {
             "legend": { "calcs": ["lastNotNull"], "displayMode": "table", "placement": "right", "showLegend": false },
@@ -1091,13 +1091,7 @@
                 "thresholdsStyle": { "mode": "line" }
               },
               "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  { "color": "green", "value": null },
-                  { "color": "red", "value": 950 }
-                ]
-              },
+              "thresholds": { "mode": "absolute", "steps": [{ "color": "green" }, { "color": "red", "value": 950 }] },
               "unit": "s"
             },
             "overrides": []
@@ -1146,13 +1140,7 @@
                 "thresholdsStyle": { "mode": "off" }
               },
               "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  { "color": "green", "value": null },
-                  { "color": "red", "value": 80 }
-                ]
-              },
+              "thresholds": { "mode": "absolute", "steps": [{ "color": "green" }, { "color": "red", "value": 80 }] },
               "unit": "s"
             },
             "overrides": []
@@ -1202,13 +1190,7 @@
                 "thresholdsStyle": { "mode": "off" }
               },
               "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  { "color": "green", "value": null },
-                  { "color": "red", "value": 80 }
-                ]
-              },
+              "thresholds": { "mode": "absolute", "steps": [{ "color": "green" }, { "color": "red", "value": 80 }] },
               "unit": "s"
             },
             "overrides": []
@@ -1266,13 +1248,7 @@
                 "thresholdsStyle": { "mode": "off" }
               },
               "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  { "color": "green", "value": null },
-                  { "color": "red", "value": 80 }
-                ]
-              },
+              "thresholds": { "mode": "absolute", "steps": [{ "color": "green" }, { "color": "red", "value": 80 }] },
               "unit": "s"
             },
             "overrides": []
@@ -1333,13 +1309,7 @@
                 "thresholdsStyle": { "mode": "off" }
               },
               "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  { "color": "green", "value": null },
-                  { "color": "red", "value": 80 }
-                ]
-              }
+              "thresholds": { "mode": "absolute", "steps": [{ "color": "green" }, { "color": "red", "value": 80 }] }
             },
             "overrides": []
           },
@@ -1388,13 +1358,7 @@
                 "thresholdsStyle": { "mode": "off" }
               },
               "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  { "color": "green", "value": null },
-                  { "color": "red", "value": 80 }
-                ]
-              },
+              "thresholds": { "mode": "absolute", "steps": [{ "color": "green" }, { "color": "red", "value": 80 }] },
               "unit": "percentunit"
             },
             "overrides": []
@@ -1443,13 +1407,7 @@
                 "thresholdsStyle": { "mode": "off" }
               },
               "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  { "color": "green", "value": null },
-                  { "color": "red", "value": 80 }
-                ]
-              }
+              "thresholds": { "mode": "absolute", "steps": [{ "color": "green" }, { "color": "red", "value": 80 }] }
             },
             "overrides": [
               {
@@ -1527,13 +1485,7 @@
                 "thresholdsStyle": { "mode": "off" }
               },
               "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  { "color": "green", "value": null },
-                  { "color": "red", "value": 80 }
-                ]
-              },
+              "thresholds": { "mode": "absolute", "steps": [{ "color": "green" }, { "color": "red", "value": 80 }] },
               "unit": "percentunit"
             },
             "overrides": []
@@ -1583,13 +1535,7 @@
                 "thresholdsStyle": { "mode": "off" }
               },
               "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  { "color": "green", "value": null },
-                  { "color": "red", "value": 80 }
-                ]
-              },
+              "thresholds": { "mode": "absolute", "steps": [{ "color": "green" }, { "color": "red", "value": 80 }] },
               "unit": "s"
             },
             "overrides": []
@@ -1644,7 +1590,7 @@
               "decimals": 0,
               "links": [],
               "mappings": [],
-              "thresholds": { "mode": "absolute", "steps": [{ "color": "green", "value": null }] },
+              "thresholds": { "mode": "absolute", "steps": [{ "color": "green" }] },
               "unit": "none"
             },
             "overrides": [
@@ -1951,7 +1897,8 @@
         "allFormat": "",
         "allValue": ".*",
         "current": { "text": ["telemetry-service"], "value": "telemetry-service" },
-        "datasource": null,
+        "datasource": { "type": "prometheus", "uid": "Zu4MxH4Vk" },
+        "definition": "",
         "hide": 0,
         "includeAll": true,
         "label": "",
@@ -1965,6 +1912,7 @@
         },
         "refresh": 1,
         "regex": "",
+        "skipUrlSync": false,
         "sort": 0,
         "type": "query"
       },
@@ -1973,6 +1921,7 @@
         "allValue": "",
         "current": { "text": ["mainnet"], "value": "mainnet" },
         "datasource": { "type": "prometheus", "uid": "${Datasource}" },
+        "definition": "",
         "hide": 0,
         "includeAll": false,
         "label": "",
@@ -1986,6 +1935,7 @@
         },
         "refresh": 1,
         "regex": "",
+        "skipUrlSync": false,
         "sort": 1,
         "type": "query"
       },
@@ -1993,7 +1943,8 @@
         "allFormat": "",
         "allValue": ".*",
         "current": { "text": ["All"], "value": "$__all" },
-        "datasource": null,
+        "datasource": { "type": "prometheus", "uid": "Zu4MxH4Vk" },
+        "definition": "",
         "hide": 0,
         "includeAll": true,
         "label": "",
@@ -2007,6 +1958,7 @@
         },
         "refresh": 1,
         "regex": "",
+        "skipUrlSync": false,
         "sort": 0,
         "type": "query"
       },
@@ -2015,6 +1967,7 @@
         "allValue": ".*",
         "current": { "text": ["All"], "value": "$__all" },
         "datasource": { "type": "prometheus", "uid": "${Datasource}" },
+        "definition": "",
         "hide": 0,
         "includeAll": true,
         "label": "",
@@ -2028,6 +1981,7 @@
         },
         "refresh": 1,
         "regex": "",
+        "skipUrlSync": false,
         "sort": 1,
         "type": "query"
       },
@@ -2036,6 +1990,7 @@
         "allValue": ".*",
         "current": { "text": ["All"], "value": ["$__all"] },
         "datasource": { "type": "prometheus", "uid": "${Datasource}" },
+        "definition": "",
         "hide": 0,
         "includeAll": true,
         "label": "",
@@ -2049,6 +2004,7 @@
         },
         "refresh": 1,
         "regex": "",
+        "skipUrlSync": false,
         "sort": 1,
         "type": "query"
       },
@@ -2179,6 +2135,6 @@
   "timezone": "",
   "title": "Storage Overview",
   "uid": "ptUp6Vn4k",
-  "version": 157,
+  "version": 159,
   "weekStart": ""
 }
